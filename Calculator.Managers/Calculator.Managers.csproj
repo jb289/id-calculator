@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\Custom.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>  
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator.Accessors\Calculator.Accessors.csproj" />
+    <ProjectReference Include="..\Calculator.Common.Contracts\Calculator.Common.Contracts.csproj" />
+    <ProjectReference Include="..\Calculator.Common\Calculator.Common.csproj" />
+    <ProjectReference Include="..\Calculator.Engines\Calculator.Engines.csproj" />
+    <ProjectReference Include="..\Calculator.Utilities\Calculator.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
