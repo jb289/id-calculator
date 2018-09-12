@@ -63,6 +63,7 @@ namespace Calculator.App
             });
 
             Console.WriteLine("Press Enter to close");
+
             Console.ReadLine();
 
         }
