@@ -10,7 +10,7 @@ using Calculator.Utilities;
 
 namespace Calculator.Managers
 {
-    public class CalculationManager : ManagerBase, ICalculationManager, ITotalStorage, IMemory
+    public class CalculationManager : ManagerBase, ICalculationManager
     {
         private readonly ICalculateEngine _calculateEngine = null;
         private ICalculateEngine CalculateEngine => _calculateEngine ?? base.EngineFactory.Create<ICalculateEngine>();
@@ -21,10 +21,7 @@ namespace Calculator.Managers
         private readonly ICacheUtility _cacheUtility = null;
         private ICacheUtility CacheUtility => _cacheUtility ?? base.UtilityFactory.Create<ICacheUtility>();
 
-        public CalculationManager()
-        {
-
-        }
+        public CalculationManager(){}
 
         public CalculatorData GetCalculationResult(CalculationRequest request)
         {
